@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Goertz - Demo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="shoesContainer">
+            <div class="row">
+                <div class="col-sm-6">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-dark">Pick a store location</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div id="eventDropDown" class="dropdown-menu">
+                      <!-- dropdown item data -->
+                      <!-- Toal store -->
+                      <!-- Average store -->
+                      <!-- Most stores -->
+                      <!-- Least store -->
+
+
+                    </div>
+                  </div>
+                      <table class="table table-striped">
+                        <thead>
+                          <tr><th colspan="2" id="statsHeader">Stats For All Inventory</th></tr>
+                        </thead>
+                        <tbody >
+                          <tr><td>Total stores</td><td id="total">100</td></tr>
+                          <tr><td>Average stores</td><td id="average">100</td></tr>
+                          <tr><td>Most stores</td><td id="most">100</td></tr>
+                          <tr><td>Least stores</td><td id="least">100</td></tr>
+  
+                        </tbody>
+                      </table>
+
+
+                </div>
+                <div class="col-sm-6 order-first order-md-2">
+
+                  <img id="responsive" alt="logo" class="p-2" src="images/output-onlinejpgtools(1).png">
+                  
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                  <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Add Data</button>
+                  <table class="table table-striped" id="storeData">
+                      <thead class="thead-dark">
+                          <th>Unit</th>
+                          <th>Store Name</th>
+                          <th>City</th>
+                          <th>Euro Sales</th>
+                          <th>Dates</th>
+                      </thead>
+                      
+                      <tbody id="storeBody">
+                        <!-- data entry -->
+                        
+                      </tbody>
+                  </table>
+                  <!-- Trigger the modal-->
+                      <!-- The Modal -->
+                      <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                              <h4 class="modal-title">Add A New Store</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <form id="newStoreForm">
+                              <div class="form-group">
+                                <label for="newStoreUnit">Unit</label>
+                                <input type="number" onfocus="this.value=''" class="form-control" id="newStoreUnit" placeholder="Unit">
+                              </div>
+                              <div class="form-group">
+                                <label for="newStoreName">Name</label>
+                                <input type="text" onfocus="this.value=''" class="form-control" id="newStoreName"placeholder="Name">
+                              </div>
+                              <div class="form-group">
+                                <label for="newStoreCity">City</label>
+                                <input type="text" onfocus="this.value=''" class="form-control" id="newStoreCity" placeholder="City">
+                              </div>
+                              <div class="form-group">
+                                <label for="newStoreSales">Euro Sales</label>
+                                <input type="number" onfocus="this.value=''" class="form-control" id="newStoreSales"placeholder="Euro Sales">
+                              </div>
+                              <div class="form-group">
+                                <label for="newStoreDates">Dates</label>
+                                <input type="date" onfocus="this.value=''" class="form-control" id="newStoreDate"placeholder="Dates">
+                              </div>
+                              </form>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-danger" onclick="saveStoreData()" data-dismiss="modal">Save</button>
+                            </div>
+
+              </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <template id="storeData-template">
+      <tr>
+        <td id="unit"></td>
+        <td id="name"></td>
+        <td id="city"></td>
+        <td id="Euro_sales"></td>
+        <td id="storeDates"></td>
+      </tr>
+    </template>
+      
+    <!-- Optional JavaScript -->
+    <script src="js/app.js" defer></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
