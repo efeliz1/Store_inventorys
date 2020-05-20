@@ -1,8 +1,9 @@
-# SuperDog Challenge 
+# Super Dog Events A Coding Challenge
 
 __CoderFoundry__
 
-
+## Description
+A shoes company inventory 
 
 Learn:
 
