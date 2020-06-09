@@ -1,6 +1,4 @@
-# Super Dog Events A Coding Challenge
 
-__CoderFoundry__
 
 ## Description
 A shoes company inventory 
@@ -12,3 +10,7 @@ Learn:
   - LocalStorage
   - Multidimensional array
 
+
+Similar to Super Dog Events A Coding Challenge
+
+__CoderFoundry__
